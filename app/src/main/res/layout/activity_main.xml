@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/background_one"
+        android:layout_width="10000dp"
+        android:layout_height="1836dp"
+        android:orientation="vertical"
+        android:scaleType="fitXY"
+        android:src="@drawable/bc_test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/background_two"
+        android:layout_width="10000dp"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:scaleType="fitXY"
+        android:src="@drawable/bc_test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/CtrlHaut"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Time : 00:00"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline8"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Score : 0€"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timer" />
+
+
+        <Button
+            android:id="@+id/debug"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="debug"
+            android:background="@drawable/perso_button"
+            app:layout_constraintBottom_toTopOf="@+id/guideline8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/game_frame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CtrlHaut">
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/kaaris"
+            android:layout_width="202dp"
+            android:layout_height="0dp"
+            android:src="@drawable/stand_kaaris"
+            app:layout_constraintBottom_toBottomOf="@+id/game_frame"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/game_frame"
+            app:layout_constraintRight_toRightOf="@+id/game_frame"
+            app:layout_constraintTop_toTopOf="@+id/guideline16"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/ennemi"
+            android:layout_width="202dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="448dp"
+            android:src="@drawable/perso_vide"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="@+id/game_frame"
+            app:layout_constraintLeft_toLeftOf="@+id/game_frame"
+            app:layout_constraintTop_toTopOf="@+id/guideline16"
+            app:layout_constraintVertical_bias="1.0" />
+        " />
+
+        <ImageView
+            android:id="@+id/dollar1"
+            android:layout_width="86dp"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/game_frame"
+            app:layout_constraintHorizontal_bias="2.0"
+            app:layout_constraintLeft_toLeftOf="@+id/game_frame"
+            app:layout_constraintRight_toRightOf="@+id/game_frame"
+            app:layout_constraintTop_toTopOf="@+id/game_frame"
+            app:layout_constraintVertical_bias="0.80" />
+
+        <ImageView
+            android:id="@+id/dollar2"
+            android:layout_width="86dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            app:layout_constraintBottom_toBottomOf="@+id/game_frame"
+            app:layout_constraintHorizontal_bias="2.0"
+            app:layout_constraintLeft_toLeftOf="@+id/game_frame"
+            app:layout_constraintRight_toRightOf="@+id/game_frame"
+            app:layout_constraintTop_toTopOf="@+id/game_frame"
+            app:layout_constraintVertical_bias="0.45" />
+
+        <ImageView
+            android:id="@+id/dollar3"
+            android:layout_width="86dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            app:layout_constraintBottom_toBottomOf="@+id/game_frame"
+            app:layout_constraintHorizontal_bias="2.0"
+            app:layout_constraintLeft_toLeftOf="@+id/game_frame"
+            app:layout_constraintRight_toRightOf="@+id/game_frame"
+            app:layout_constraintTop_toTopOf="@+id/game_frame"
+            app:layout_constraintVertical_bias="0.25" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="256dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/CtrlBas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_frame">
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66" />
+
+        <ImageView
+            android:id="@+id/imageVie"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toTopOf="@+id/guideline11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/life5" />
+
+        <Button
+            android:id="@+id/buttonJump"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Jump"
+            android:background="@drawable/perso_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
+
+        <Button
+            android:id="@+id/block"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Block"
+            android:background="@drawable/perso_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline14"
+            app:layout_constraintStart_toEndOf="@+id/buttonJump"
+            app:layout_constraintTop_toBottomOf="@+id/imageVie" />
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="hit"
+            android:background="@drawable/perso_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/block"
+            app:layout_constraintTop_toTopOf="@+id/guideline11" />
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
