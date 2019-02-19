@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.octogone;
 
 import org.junit.Test;
 

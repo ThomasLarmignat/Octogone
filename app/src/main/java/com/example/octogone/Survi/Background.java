@@ -1,9 +1,9 @@
-package com.example.myapplication;
+package com.example.octogone.Survi;
 import android.animation.ValueAnimator;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 
-//Classe permettanr de faire défiler le fond
+//Classe permettant de faire défiler le fond
 public class Background {
     private ImageView backgroundOne;
     private ImageView backgroundTwo;
@@ -24,7 +24,7 @@ public class Background {
                 final float progress = (float) animation.getAnimatedValue();
                 final float width = backgroundOne.getWidth();
                 final float translationX = width * progress;
-                backgroundOne.setTranslationX(-translationX);
+                backgroundOne.setTranslationX(translationX);
                 backgroundTwo.setTranslationX(translationX - width);
             }
         });

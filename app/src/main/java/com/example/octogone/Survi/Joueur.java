@@ -1,28 +1,41 @@
-package com.example.myapplication;
+package com.example.octogone.Survi;
+
 import android.animation.ObjectAnimator;
-import android.media.Image;
+import android.content.Intent;
 import android.os.Handler;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.example.octogone.R;
 
 import pl.droidsonroids.gif.GifImageView;
 
 public class Joueur {
     private int vie = 5;
     private GifImageView joueur;
-    private Ennemi ennemi;
     private Handler handler;
     private int posSol;
     private boolean peutAttack = true;
     private boolean estBloquer = false;
     private ImageView barreVie;
+    private int score = 0;
+    private TextView texteScore;
+    private SurviActivity s;
 
-    public Joueur(GifImageView j, Ennemi e, ImageView barreVie){
+    public Joueur(GifImageView j, ImageView barreVie, TextView score,SurviActivity s){
         joueur = j;
         handler = new Handler();
-        ennemi = e;
         posSol = joueur.getTop();
         this.barreVie = barreVie;
+        texteScore = score;
+        this.s = s;
     }
+
+
+    public GifImageView get_position(){
+        return joueur;
+    }
+
 
     public void frapper(){
         joueur.setImageResource(R.drawable.hit_kaaris);
@@ -56,7 +69,7 @@ public class Joueur {
         handler.postDelayed(new Runnable() {
             public void run() {
                 normal();
-                estBloquer =false;
+                estBloquer = false;
             }
         }, 300);
     }
@@ -71,8 +84,23 @@ public class Joueur {
 
     public void degat(){
         vie = vie-1;
-        switch(vie){
-            case 0:barreVie.setImageResource(R.drawable.life);break;
+        actu_vie(vie);
+    }
+
+    public void plus_vie(){
+        if(vie<5){
+            vie = vie+1;
+            actu_vie(vie);
+        }
+    }
+
+    public int getVie(){
+        return this.vie;
+    }
+
+    public void actu_vie(int v){
+        switch(v){
+            case 0:barreVie.setImageResource(R.drawable.life);s.gameOver();break;
             case 1:barreVie.setImageResource(R.drawable.life1);break;
             case 2:barreVie.setImageResource(R.drawable.life2);break;
             case 3:barreVie.setImageResource(R.drawable.life3);break;
@@ -81,7 +109,17 @@ public class Joueur {
         }
     }
 
-    public int getVie(){
-        return this.vie;
+    public void update_score(int s){
+        if(s == 1){
+            score += 10;
+            texteScore.setText(score+"");
+        }else{
+            score += 1000;
+            texteScore.setText(score+"");
+        }
+    }
+
+    public int getScore() {
+        return score;
     }
 }
