@@ -46,6 +46,7 @@ public class Combat {
                 public void run() {
                     if(e.getVie() == 0){
                         endCombat();
+                        j.update_score(2);
                     }else{
                         e.normal();
                         e.setFrappable(true);
@@ -74,7 +75,9 @@ public class Combat {
     }
 
 
-
+    public void ennemiMeurt(){
+        e.meurt();
+    }
     public void startEnnemAttack(){
         timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
@@ -88,9 +91,8 @@ public class Combat {
     public void endCombat(){
         e.meurt();
         bc.resume();
-        j.update_score(2);
         handler.removeCallbacksAndMessages(null);
-        timer.cancel();
+        //timer.cancel();//a verifier source de bug
         stuntCount = 0;
     }
 }

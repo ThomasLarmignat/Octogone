@@ -1,6 +1,7 @@
 package com.example.octogone;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -22,6 +23,8 @@ public class OptionsActivity extends AppCompatActivity {
     private int maps[] = {R.drawable.flag_english, R.drawable.flag_french};
     private int countMaps = maps.length;
     private int currentIndexMaps = 0;
+    private Button reset;
+    SharedPreferences sharedPreferences;
 
 
 
@@ -34,7 +37,7 @@ public class OptionsActivity extends AppCompatActivity {
         setContentView(R.layout.options_activity);
 
 
-
+        sharedPreferences = getBaseContext().getSharedPreferences("PREFS", MODE_PRIVATE);
 
 
         btnNext = (Button) findViewById(R.id.buttonNext);
@@ -71,10 +74,25 @@ public class OptionsActivity extends AppCompatActivity {
 
         valider.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
+                apply();
             }
         });
 
+        reset = (Button) findViewById(R.id.raz);
+
+        reset.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                sharedPreferences.edit().putInt("Level",0).apply();
+                sharedPreferences.edit().putInt("Score",300000).apply();
+
+            }
+        });
+
+    }
+
+    public void apply(){
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+        this.finish();
     }
 }

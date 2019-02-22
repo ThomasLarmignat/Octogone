@@ -21,14 +21,17 @@ public class Joueur {
     private int score = 0;
     private TextView texteScore;
     private SurviActivity s;
+    private int images[];// DANS L'ORDRE : STAND; BLOCK; HIT;
 
-    public Joueur(GifImageView j, ImageView barreVie, TextView score,SurviActivity s){
+    public Joueur(GifImageView j, ImageView barreVie, TextView score,SurviActivity s,int images[]){
         joueur = j;
         handler = new Handler();
         posSol = joueur.getTop();
         this.barreVie = barreVie;
         texteScore = score;
         this.s = s;
+        this.images = images;
+        normal();
     }
 
 
@@ -38,7 +41,7 @@ public class Joueur {
 
 
     public void frapper(){
-        joueur.setImageResource(R.drawable.hit_kaaris);
+        joueur.setImageResource(images[2]);//rendre modulable
         handler.postDelayed(new Runnable() {
             public void run() {
                 normal();
@@ -65,7 +68,7 @@ public class Joueur {
 
     public void bloquer(){
         estBloquer = true;
-        joueur.setImageResource(R.drawable.block_kaaris);
+        joueur.setImageResource(images[1]);//rendre modulable
         handler.postDelayed(new Runnable() {
             public void run() {
                 normal();
@@ -75,8 +78,8 @@ public class Joueur {
     }
 
     public void normal(){
-        joueur.setImageResource(R.drawable.stand_kaaris);
-    }
+        joueur.setImageResource(images[0]);
+    }//rendre modulable
 
     public boolean peutAttack(){return(peutAttack);}
 

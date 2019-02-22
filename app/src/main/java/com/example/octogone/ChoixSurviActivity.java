@@ -1,6 +1,7 @@
 package com.example.octogone;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 
@@ -33,10 +34,12 @@ public class ChoixSurviActivity extends AppCompatActivity {
     private int countMaps = maps.length;
     private int currentIndexMaps = 0;
 
-    private int perso[] = {R.drawable.stand_kaaris, R.drawable.stand_lorenzo};
-    private int countPerso = perso.length;
+    private int perso[] = {R.drawable.stand_kaaris,R.drawable.stand_lorenzo, R.drawable.stand_jul,R.drawable.stand_booba1};
+    private int persoDebloques[] = {R.drawable.bloque,R.drawable.bloque,R.drawable.bloque,R.drawable.bloque};
+    private int countPerso;
     private int currentIndexPerso = 0;
-
+    private SharedPreferences sharedPreferences;
+    private int level;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +51,20 @@ public class ChoixSurviActivity extends AppCompatActivity {
 
         previous = (Button)findViewById(R.id.previous);
         next = (Button)findViewById(R.id.next);
+
+        sharedPreferences = getBaseContext().getSharedPreferences("PREFS", MODE_PRIVATE);
+
+        level = sharedPreferences.getInt("Level", 0);
+        for(int i=0 ; i<level+1; i++){
+            persoDebloques[i] = perso[i];
+        }
+
+        countPerso = persoDebloques.length;
+
+
+
+
+
 
         //--------------------------MAPS------------------------------------------------------------
         btnNext = (Button) findViewById(R.id.buttonNext);
@@ -101,15 +118,17 @@ public class ChoixSurviActivity extends AppCompatActivity {
 
         switcherPerso.setInAnimation(in1);
         switcherPerso.setOutAnimation(out1);
-        switcherPerso.setImageResource(perso[currentIndexPerso]);
+        switcherPerso.setImageResource(persoDebloques[currentIndexPerso]);
 
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
                 currentIndexPerso++;
-                if (currentIndexPerso == countMaps)
+
+                if (currentIndexPerso == countPerso)
                     currentIndexPerso = 0;
-                switcherPerso.setImageResource(perso[currentIndexPerso]);
+                switcherPerso.setImageResource(persoDebloques[currentIndexPerso]);
             }
         });
 
@@ -168,9 +187,12 @@ public class ChoixSurviActivity extends AppCompatActivity {
 
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), SurviActivity.class);//add more, with peronnage or map
-                intent.putExtra("map", currentIndexMaps);
-                startActivity(intent);
+                if(persoDebloques[currentIndexPerso] != R.drawable.bloque){
+                    Intent intent = new Intent(getApplicationContext(), SurviActivity.class);//add more, with peronnage or map
+                    intent.putExtra("map", currentIndexMaps);
+                    intent.putExtra("joueur", currentIndexPerso);
+                    startActivity(intent);
+                }
             }
         });
 

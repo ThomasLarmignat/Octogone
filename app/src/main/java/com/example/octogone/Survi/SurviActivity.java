@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.octogone.MainActivity;
 import com.example.octogone.R;
 
 import java.util.ArrayList;
@@ -38,13 +39,21 @@ public class SurviActivity extends AppCompatActivity {
     private Collectible collectables;
     private TextView score;
     //boutons
+    private Button buttonMENU = null;
     private Button buttonHit = null;
     private Button buttonJump = null;
     private Button buttonBlock = null;
     private Button buttonDebug = null;
     SharedPreferences sharedPreferences;
-
-
+    private int kaaris[] = {R.drawable.stand_kaaris, R.drawable.block_kaaris,R.drawable.hit_kaaris};
+    private int lorenzo[] = {R.drawable.stand_lorenzo, R.drawable.block_lorenzo,R.drawable.hit_lorenzo};
+    private int jul[] = {R.drawable.stand_jul, R.drawable.block_jul,R.drawable.hit_jul};
+    private int booba[] = {R.drawable.stand_booba, R.drawable.block_booba,R.drawable.hit_booba};
+    public static Activity a;
+    private boolean pause = false;
+    private int timeSaveS;
+    private int timeSaveM;
+    private GifImageView pause_logo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         ActionBar actionBar = getSupportActionBar();
@@ -52,8 +61,9 @@ public class SurviActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.survi_activity);
-
+        a =this;
         //récuperation des boutons
+        buttonMENU = (Button) findViewById(R.id.menu);
         buttonHit = (Button) findViewById(R.id.button);
         buttonJump = (Button) findViewById(R.id.buttonJump);
         buttonBlock = (Button) findViewById(R.id.block);
@@ -63,6 +73,7 @@ public class SurviActivity extends AppCompatActivity {
         //Recuperation des infos pour la map et le personnage
         Intent intent = getIntent();
         int map = intent.getIntExtra("map",0);
+        int joueur = intent.getIntExtra("joueur",0);
         //traitement map
         final ImageView backgroundOne = (ImageView) findViewById(R.id.background_one);
         final ImageView backgroundTwo = (ImageView) findViewById(R.id.background_two);
@@ -82,15 +93,23 @@ public class SurviActivity extends AppCompatActivity {
             bc = new Background(background3,background4);
         }
 
-
-
-
-
-        //creation du personnage (avec le choix)
+        pause_logo = (GifImageView) findViewById(R.id.pause_logo);
         final GifImageView persoPos = (GifImageView) findViewById(R.id.kaaris);
         final ImageView barreVie = (ImageView) findViewById(R.id.imageVie);
         score = (TextView) findViewById(R.id.score);
-        perso = new Joueur(persoPos,barreVie,score, this);
+
+
+        //creation du personnage (avec le choix)
+        switch(joueur){
+            case 0: perso = new Joueur(persoPos,barreVie,score, this,kaaris);break;
+            case 1: perso = new Joueur(persoPos,barreVie,score, this,lorenzo);break;
+            case 2: perso = new Joueur(persoPos,barreVie,score, this,jul);break;
+            case 3: perso = new Joueur(persoPos,barreVie,score, this,booba);break;
+        }
+
+
+
+
 
 
 
@@ -158,15 +177,56 @@ public class SurviActivity extends AppCompatActivity {
         });
 
 
+
+
         buttonDebug.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                cb.startCombat();
+                JeuPause();
             }
         });
 
-
-
+        buttonMENU.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                quitter();
+            }
+        });
     }
+
+    @Override
+    public void onPause() {
+        pause = false ;
+        super.onPause();
+        chrono.finish();
+        cb.endCombat();
+        cb.ennemiMeurt();
+        JeuPause();
+    }
+
+    public void quitter(){
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+        this.finish();
+    }
+    public void JeuPause(){
+        if(pause){//si en pause
+            chrono = new Chrono(textChrono,collectables,cb);
+            chrono.setMinutes(timeSaveM);
+            chrono.setSecondes(timeSaveS);
+            chrono.startChrono();
+            buttonMENU.setVisibility(View.INVISIBLE);
+            pause_logo.setVisibility(View.INVISIBLE);
+            pause = false;
+        }else{//si pas en pause
+            timeSaveM = chrono.getMinutes();
+            timeSaveS = chrono.getSecondes();
+            chrono.annuleChrono();
+            buttonMENU.setVisibility(View.VISIBLE);
+            pause_logo.setVisibility(View.VISIBLE);
+            cb.ennemiMeurt();
+            pause = true;
+        }
+    }
+
 
     public void gameOver(){
         Intent intent = new Intent(getApplicationContext(), GOActivity.class);
@@ -188,7 +248,13 @@ public class SurviActivity extends AppCompatActivity {
         }
         startActivity(intent);
         chrono.finish();
+        cb.ennemiMeurt();
         this.finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        return;
     }
 }
 

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Octogone</string>
+    <string name="Jouer">PLAY</string>
+    <string name="Ocotogone">"ENTER THE OCTAGON "</string>
 </resources>

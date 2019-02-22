@@ -15,6 +15,7 @@ import com.example.octogone.Survi.SurviActivity;
 public class MainActivity extends AppCompatActivity {
     private Button buttonPlay;
     private Button buttonOptions;
+    private Button buttonOcto;
     private TextView textScore;
     private TextView textTime;
     SharedPreferences sharedPreferences;
@@ -40,13 +41,24 @@ public class MainActivity extends AppCompatActivity {
 
 
         buttonPlay = (Button)findViewById(R.id.jouer);
-
         buttonPlay.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ChoixSurviActivity.class);
                 startActivity(intent);
             }
         });
+
+
+
+
+        buttonOcto = (Button)findViewById(R.id.octo);
+        buttonOcto.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MenuBossActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         buttonOptions = (Button)findViewById(R.id.option);
         buttonOptions.setOnClickListener(new View.OnClickListener() {

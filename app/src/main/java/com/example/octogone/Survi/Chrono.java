@@ -95,6 +95,16 @@ public class Chrono extends Activity {
         text.setText(tmp);
     }
 
+
+    public void setMinutes(int m){
+        this.minutes = m;
+    }
+
+    public void setSecondes(int s){
+        this.secondes = s;
+    }
+
+
     public int getMinutes(){
         return minutes;
     }

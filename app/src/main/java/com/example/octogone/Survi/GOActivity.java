@@ -78,21 +78,29 @@ public class GOActivity extends AppCompatActivity {
 
         buttonMenu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                GOActivity.a.finish();
+                menu();
             }
         });
 
         buttonRestart = (Button)findViewById(R.id.restart);
         buttonRestart.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), SurviActivity.class);
-                startActivity(intent);
-                GOActivity.a.finish();
+                restart();
             }
         });
 
+    }
+
+    public void restart(){
+        Intent intent = new Intent(getApplicationContext(), SurviActivity.class);
+        startActivity(intent);
+        this.finish();
+    }
+
+    public void menu(){
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+        this.finish();
     }
 
 
