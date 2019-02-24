@@ -66,8 +66,12 @@ public class Combat {
                 public void run() {
                     if(e.getVie() > 0 && !e.estStunt()){
                         e.normal();
-                    }else{
+                    }
+                    if(e.getVie() > 0 && e.estStunt()){
                         e.stunt();
+                    }
+                    if(e.getVie() == 0){
+                        endCombat();
                     }
                 }
             }, 300);
@@ -88,8 +92,13 @@ public class Combat {
             }, 0, 2000);
     }
 
+    public void annuleEnnemAttack(){
+        timer.cancel();
+    }
+
     public void endCombat(){
         e.meurt();
+        annuleEnnemAttack();
         bc.resume();
         handler.removeCallbacksAndMessages(null);
         //timer.cancel();//a verifier source de bug

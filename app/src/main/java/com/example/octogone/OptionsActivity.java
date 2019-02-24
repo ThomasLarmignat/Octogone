@@ -83,7 +83,10 @@ public class OptionsActivity extends AppCompatActivity {
         reset.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 sharedPreferences.edit().putInt("Level",0).apply();
-                sharedPreferences.edit().putInt("Score",300000).apply();
+                sharedPreferences.edit().putString("strTime","00:00").apply();
+                sharedPreferences.edit().putInt("minutes",0).apply();
+                sharedPreferences.edit().putInt("secondes",0).apply();
+                sharedPreferences.edit().putInt("Score",300000).apply();//A changer
 
             }
         });

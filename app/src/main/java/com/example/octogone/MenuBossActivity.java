@@ -18,6 +18,8 @@ import android.widget.ViewSwitcher;
 
 import com.example.octogone.Combat_boss.BossActivity;
 
+import pl.droidsonroids.gif.GifImageView;
+
 public class MenuBossActivity extends AppCompatActivity {
     private ImageSwitcher simpleImageSwitcher;
     private TextView name;
@@ -26,12 +28,13 @@ public class MenuBossActivity extends AppCompatActivity {
     private Button suivant;
     private String round[] = {"Round 1","Round 2","Round 3"};
     private String noms[] = {"Lorenzo","Jul","Booba"};
-    private int prix[] = {1000,20000,30000};
+    private int prix[] = {25000,50000,75000};
     private int persoDebloques[] = {R.drawable.stand_lorenzo, R.drawable.stand_jul,R.drawable.stand_booba1};
     private int perso[] = {R.drawable.bloque, R.drawable.bloque,R.drawable.bloque};
+    private int resPerso[] = {R.drawable.lorenzo_logo, R.drawable.jul_logo,R.drawable.booba_logo};
     private int countPerso = perso.length;
     private int currentIndex = 0;
-
+    private GifImageView logo;
     private int num_score ;
     private int level ;
 
@@ -47,6 +50,7 @@ public class MenuBossActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choix_boss_activity);
         sharedPreferences = getBaseContext().getSharedPreferences("PREFS", MODE_PRIVATE);
+        logo = (GifImageView) findViewById(R.id.logo);
 
         retour = (Button) findViewById(R.id.retour);
 
@@ -88,11 +92,13 @@ public class MenuBossActivity extends AppCompatActivity {
         if(currentIndex< level){//deja buy
             suivant.setText("✔");
             suivant.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-            name.setText(noms[currentIndex]);
+            name.setText(round[currentIndex]);
+            logo.setImageResource(resPerso[currentIndex]);
         }else{
             suivant.setText(prix[currentIndex] +"");
             name.setText(round[currentIndex]);
             suivant.setCompoundDrawablesWithIntrinsicBounds(R.drawable.dollard_icone, 0, 0, 0);
+            logo.setImageResource(R.drawable.bloque_logo);
         }
 
         btnNext.setOnClickListener(new View.OnClickListener() {
@@ -101,16 +107,16 @@ public class MenuBossActivity extends AppCompatActivity {
                 if (currentIndex == countPerso)
                     currentIndex = 0;
                 simpleImageSwitcher.setImageResource(perso[currentIndex]);
-
-
                 if(currentIndex< level){//deja buy
                     suivant.setText("✔");
                     suivant.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-                    name.setText(noms[currentIndex]);
+                    name.setText(round[currentIndex]);
+                    logo.setImageResource(resPerso[currentIndex]);
                 }else{
                     suivant.setText(prix[currentIndex] +"");
                     name.setText(round[currentIndex]);
                     suivant.setCompoundDrawablesWithIntrinsicBounds(R.drawable.dollard_icone, 0, 0, 0);
+                    logo.setImageResource(R.drawable.bloque_logo);
                 }
             }
         });
@@ -134,12 +140,11 @@ public class MenuBossActivity extends AppCompatActivity {
             intent.putExtra("BossIndex",currentIndex);
             startActivity(intent);
             this.finish();
-        }else if(num_score >= prix[currentIndex] && (currentIndex >= level) && (currentIndex != level+1)){//assez argent
+        }else if(num_score >= prix[currentIndex] && (currentIndex >= level) && (currentIndex != level+1 && currentIndex != level+2)){//assez argent
             sharedPreferences.edit().putInt("Score",sharedPreferences.getInt("Score", 0)- prix[currentIndex]).apply();
             perso[currentIndex] = persoDebloques[currentIndex];
             simpleImageSwitcher.setImageResource(perso[currentIndex]);
             suivant.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-            name.setText(noms[currentIndex]);
             suivant.setText("✔");
             sharedPreferences.edit().putInt("Level",currentIndex+1).apply();
             sharedPreferences.edit().putInt("Index",currentIndex).apply();

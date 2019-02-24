@@ -2,6 +2,7 @@ package com.example.octogone.Combat_boss;
 import android.os.Handler;
 import android.view.View;
 import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
 
 import com.example.octogone.R;
 
@@ -19,12 +20,14 @@ public class Boss {
     private boolean stunt = false;
     private int boss[];
     private BossActivity s;
+    private ImageView barreVie;
 
 
-    public Boss(GifImageView e, GifImageView p, BossActivity s, int boss[] ){
+    public Boss(GifImageView e, GifImageView p, BossActivity s, int boss[], ImageView barreVie ){
         this.e = e;
         this.p = p;
         this.boss = boss;
+        this.barreVie = barreVie;
         this.s = s;
         this.handler = new Handler();
 
@@ -34,7 +37,7 @@ public class Boss {
     public void apparaitre(){
         stunt = false;
         estEnVie = true;
-        setVie(300);
+        setVie(10);
         e.setImageResource(boss[0]);
         avancer();
         handler.postDelayed(new Runnable() {
@@ -79,9 +82,23 @@ public class Boss {
 
     public void degats() {
         frappable = false;
-        this.pv = this.pv-30;
+        this.pv = this.pv-1;
+        actu_vie(this.pv);
         e.setImageResource(boss[3]);
     }
+
+    public void actu_vie(int v){
+        switch(v){
+            case 0:barreVie.setImageResource(R.drawable.life);s.win();break;
+            case 2:barreVie.setImageResource(R.drawable.life1);break;
+            case 4:barreVie.setImageResource(R.drawable.life2);break;
+            case 6:barreVie.setImageResource(R.drawable.life3);break;
+            case 8:barreVie.setImageResource(R.drawable.life4);break;
+            case 10:barreVie.setImageResource(R.drawable.life5);break;
+        }
+    }
+
+
 
 
 

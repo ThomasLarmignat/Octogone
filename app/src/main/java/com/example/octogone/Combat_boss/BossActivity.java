@@ -34,7 +34,9 @@ public class BossActivity extends AppCompatActivity {
     private int lorenzo[] = {R.drawable.stand_e_lorenzo, R.drawable.stunt_e_lorenzo,R.drawable.hit_e_lorenzo,R.drawable.degat_e_lorenzo};
     private int jul[] = {R.drawable.stand_e_jul, R.drawable.stunt_e_jul,R.drawable.hit_e_jul,R.drawable.degat_e_jul};
     private int booba[] = {R.drawable.stand_e_booba, R.drawable.stunt_e_booba,R.drawable.hit_e_booba,R.drawable.degat_e_booba};
+    private int resPerso[] = {R.drawable.lorenzo_logo, R.drawable.jul_logo,R.drawable.booba_logo};
     private int bossIndex;
+    private GifImageView logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,7 @@ public class BossActivity extends AppCompatActivity {
         buttonHit = (Button) findViewById(R.id.button);
         buttonJump = (Button) findViewById(R.id.buttonJump);
         buttonBlock = (Button) findViewById(R.id.block);
+        logo = (GifImageView) findViewById(R.id.logo);
 
 
 
@@ -59,6 +62,8 @@ public class BossActivity extends AppCompatActivity {
         //creation du personnage (avec le choix)
         final GifImageView persoPos = (GifImageView) findViewById(R.id.kaaris);
         final ImageView barreVie = (ImageView) findViewById(R.id.imageVie);
+        final ImageView barreVie2 = (ImageView) findViewById(R.id.imageVie2);
+
         score = (TextView) findViewById(R.id.score);
         perso = new Joueur(persoPos,barreVie,score, this,kaaris);
 
@@ -67,12 +72,13 @@ public class BossActivity extends AppCompatActivity {
 
         //creation des ennemis
         final GifImageView ennemiPos = (GifImageView) findViewById(R.id.ennemi);
+        logo.setImageResource(resPerso[bossIndex]);
 
 
         switch(bossIndex){
-            case 0 : ennemi = new Boss(ennemiPos, persoPos, this,lorenzo);break;
-            case 1 : ennemi = new Boss(ennemiPos, persoPos,this, jul);break;
-            case 2 : ennemi = new Boss(ennemiPos, persoPos, this,booba);break;
+            case 0 : ennemi = new Boss(ennemiPos, persoPos, this,lorenzo,barreVie2);break;
+            case 1 : ennemi = new Boss(ennemiPos, persoPos,this, jul,barreVie2);break;
+            case 2 : ennemi = new Boss(ennemiPos, persoPos, this,booba,barreVie2);break;
 
         }
 
