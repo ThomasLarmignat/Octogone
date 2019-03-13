@@ -84,6 +84,8 @@ public class Combat {
     }
     public void startEnnemAttack(){
         timer = new Timer();
+
+
         timer.scheduleAtFixedRate(new TimerTask() {
                 @Override
                 public void run() {

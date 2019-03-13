@@ -35,23 +35,26 @@
     <session id="-151770435">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Translations Editor" value="2" />
           <entry key="gradle" value="3" />
-          <entry key="java" value="111" />
+          <entry key="java" value="115" />
           <entry key="png" value="11" />
-          <entry key="xml" value="51" />
+          <entry key="xml" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -59,20 +62,20 @@
           <entry key="" value="2" />
           <entry key="Groovy" value="3" />
           <entry key="Image" value="11" />
-          <entry key="JAVA" value="111" />
-          <entry key="XML" value="51" />
+          <entry key="JAVA" value="115" />
+          <entry key="XML" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="7971" />
+          <entry key="java" value="8006" />
           <entry key="txt" value="260" />
           <entry key="xml" value="461" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7971" />
+          <entry key="JAVA" value="8006" />
           <entry key="PLAIN_TEXT" value="260" />
           <entry key="XML" value="461" />
         </counts>
@@ -82,14 +85,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="android-dummy://C:/Users/Thomas/AndroidStudioProjects/Octogone/app/Translations Editor">
-          <provider selected="true" editor-type-id="string-resource-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/ChoixSurviActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2380">
+            <state relative-caret-position="2278">
               <caret line="150" selection-start-line="150" selection-end-line="150" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -98,12 +96,98 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/choix_survi_activity.xml">
           <provider selected="true" editor-type-id="android-designer2" />
           <provider editor-type-id="text-editor">
             <state relative-caret-position="3417">
-              <caret line="201" column="33" selection-start-line="201" selection-start-column="33" selection-end-line="201" selection-end-column="33" />
+              <caret line="205" column="33" selection-start-line="205" selection-start-column="33" selection-end-line="205" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/survi_activity.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="-1615">
+              <caret line="198" column="4" selection-start-line="198" selection-start-column="4" selection-end-line="198" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/boss_activity.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="1972">
+              <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/choix_boss_activity.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="383">
+              <caret line="69" column="38" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/OptionsActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="84" column="67" selection-start-line="84" selection-start-column="67" selection-end-line="84" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/options_activity.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/Survi/SurviActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="199" selection-start-line="199" selection-end-line="199" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/Survi/Combat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
+              <folding>
+                <element signature="e#2193#2340#0" expanded="true" />
+                <element signature="e#2339#2340#0" expanded="true" />
+                <element signature="e#2394#2395#0" expanded="true" />
+                <element signature="e#2424#2425#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/Combat_boss/Combat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+              <folding>
+                <element signature="e#1913#2061#0" expanded="true" />
+                <element signature="e#2060#2061#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,27 +241,27 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/boss_game_over.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/pause_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/octogone/Survi/Chrono.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/survi_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/octogone/Survi/SurviActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/octogone/Combat_boss/GOBossActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/octogone/Survi/GOActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/octogone/Combat_boss/Combat.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/octogone/Survi/Combat.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/choix_boss_activity.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/boss_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/octogone/Combat_boss/BossActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/octogone/Combat_boss/Boss.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/octogone/OptionsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/octogone/MenuBossActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/choix_survi_activity.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/survi_activity.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/boss_activity.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/choix_boss_activity.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/octogone/Survi/Combat.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/octogone/Combat_boss/Combat.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="2873" />
-    <option name="y" value="2" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="533" />
+    <option name="y" value="-8" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -186,19 +270,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
               <item name="Octogone" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="Octogone" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
             </path>
             <path>
               <item name="Octogone" type="1abcf292:AndroidViewProjectNode" />
@@ -244,14 +321,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="device.picker.selection" value="LGH870DS91b8bddc" />
+    <property name="device.picker.selection" value="Nexus_10_API_23" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -360,11 +439,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2873" y="2" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
+      <window_info id="simpleUML" weight="0.97441363" />
       <window_info id="Captures" order="0" sideWeight="0.50075644" side_tool="true" weight="0.10394456" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49924356" visible="true" weight="0.5273523" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49924356" visible="true" weight="0.12260128" />
       <window_info id="Structure" order="2" sideWeight="0.50248754" side_tool="true" weight="0.10394456" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -375,11 +455,11 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.86334056" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Logcat" order="4" sideWeight="0.49840087" weight="0.28524947" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="4" sideWeight="0.49840087" visible="true" weight="0.28524947" />
       <window_info anchor="bottom" id="TODO" order="5" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50159913" side_tool="true" weight="0.28308025" />
-      <window_info anchor="bottom" id="Build" order="8" sideWeight="0.4989339" weight="0.3264642" />
+      <window_info anchor="bottom" id="Build" order="8" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Android Profiler" order="9" weight="0.78199565" />
       <window_info anchor="right" id="Preview" order="0" weight="0.2153518" />
       <window_info anchor="right" id="Device File Explorer" order="1" side_tool="true" />
@@ -465,14 +545,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/Combat_boss/Policier.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/Combat_boss/Chrono.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/options_activity.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/boss_game_over.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
@@ -482,12 +554,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
       <provider selected="true" editor-type-id="images" />
@@ -516,28 +588,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/survi_activity.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="294" column="49" selection-start-line="294" selection-start-column="49" selection-end-line="294" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/Survi/Chrono.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1244#1245#0" expanded="true" />
-            <element signature="e#2112#2113#0" expanded="true" />
-            <element signature="e#2145#2146#0" expanded="true" />
-            <element signature="e#2190#2191#0" expanded="true" />
-            <element signature="e#2223#2224#0" expanded="true" />
-            <element signature="e#2167#2168#0" expanded="true" />
-            <element signature="e#2198#2199#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -552,9 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="105" selection-start-line="105" selection-end-line="105" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -562,14 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
           <caret line="88" column="13" lean-forward="true" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2466#2584#0" expanded="true" />
-            <element signature="e#2583#2584#0" expanded="true" />
-            <element signature="e#2682#2803#0" expanded="true" />
-            <element signature="e#3152#3153#0" expanded="true" />
-            <element signature="e#3174#3175#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -577,10 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="69" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1669#1670#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -599,47 +638,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/choix_boss_activity.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="69" column="38" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/Combat_boss/GOBossActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="61" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/Survi/Combat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="100" column="28" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1600#2000#0" expanded="true" />
-            <element signature="e#1999#2000#0" expanded="true" />
-            <element signature="e#2055#2056#0" expanded="true" />
-            <element signature="e#2080#2081#0" expanded="true" />
-            <element signature="e#2042#2189#0" expanded="true" />
-            <element signature="e#2188#2189#0" expanded="true" />
-            <element signature="e#2398#2399#0" expanded="true" />
-            <element signature="e#2418#2419#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/boss_activity.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="116" column="37" selection-start-line="116" selection-start-column="37" selection-end-line="116" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -657,26 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/Combat_boss/Combat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/Survi/SurviActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="242" column="49" selection-start-line="242" selection-start-column="41" selection-end-line="242" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/Combat_boss/BossActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1836">
@@ -691,9 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="72" lean-forward="true" selection-start-line="20" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -701,19 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/OptionsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="84" column="67" selection-start-line="84" selection-start-column="67" selection-end-line="84" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -722,7 +688,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/ChoixSurviActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2380">
+        <state relative-caret-position="2278">
           <caret line="150" selection-start-line="150" selection-end-line="150" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -730,11 +696,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/Survi/SurviActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="199" selection-start-line="199" selection-end-line="199" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/choix_survi_activity.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="3417">
-          <caret line="201" column="33" selection-start-line="201" selection-start-column="33" selection-end-line="201" selection-end-column="33" />
+          <caret line="205" column="33" selection-start-line="205" selection-start-column="33" selection-end-line="205" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/survi_activity.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-1615">
+          <caret line="198" column="4" selection-start-line="198" selection-start-column="4" selection-end-line="198" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/boss_activity.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/choix_boss_activity.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="69" column="38" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/OptionsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="84" column="67" selection-start-line="84" selection-start-column="67" selection-end-line="84" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/options_activity.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/Survi/Combat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+          <folding>
+            <element signature="e#2193#2340#0" expanded="true" />
+            <element signature="e#2339#2340#0" expanded="true" />
+            <element signature="e#2394#2395#0" expanded="true" />
+            <element signature="e#2424#2425#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/octogone/Combat_boss/Combat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="e#1913#2061#0" expanded="true" />
+            <element signature="e#2060#2061#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

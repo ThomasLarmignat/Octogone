@@ -1,6 +1,9 @@
 package com.example.octogone.Combat_boss;
 
+import android.app.Activity;
 import android.os.Handler;
+import android.os.Looper;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -75,7 +78,7 @@ public class Combat {
         timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
                 @Override
-                public void run() {
+                public void run(){
                     EnnemiAttack();
                 }
             }, 0, 2000);

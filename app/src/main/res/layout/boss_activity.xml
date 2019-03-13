@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.80300957" />
+        app:layout_constraintGuide_percent="0.92" />
 
 
     <android.support.constraint.ConstraintLayout
@@ -84,31 +84,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.6" />
+            app:layout_constraintGuide_percent="0.48" />
 
 
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/kaaris"
-            android:layout_width="202dp"
+            android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:src="@drawable/stand_kaaris"
-            app:layout_constraintBottom_toBottomOf="@+id/game_frame"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.019"
             app:layout_constraintLeft_toLeftOf="@+id/game_frame"
             app:layout_constraintRight_toRightOf="@+id/game_frame"
-            app:layout_constraintTop_toTopOf="@+id/guideline16"
+            app:layout_constraintTop_toTopOf="@+id/guideline10"
             app:layout_constraintVertical_bias="0.0" />
 
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/ennemi"
-            android:layout_width="202dp"
+            android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_marginLeft="192dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:src="@drawable/perso_vide"
-            app:layout_constraintBottom_toBottomOf="@+id/game_frame"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="@+id/game_frame"
-            app:layout_constraintTop_toTopOf="@+id/guideline16"
+            app:layout_constraintTop_toTopOf="@+id/guideline10"
             app:layout_constraintVertical_bias="1.0" />
         " />
 
@@ -162,17 +163,25 @@
             android:layout_height="wrap_content"
             app:barrierDirection="top" />
 
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="20dp" />
+
     </android.support.constraint.ConstraintLayout>
 
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/CtrlBas"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="530dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game_frame">
+        app:layout_constraintTop_toTopOf="@+id/game_frame">
 
 
         <android.support.constraint.Guideline
@@ -207,19 +216,18 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/life5" />
 
         <Button
             android:id="@+id/buttonJump"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
             android:background="@color/bouton"
             android:text="Jump"
             android:textColor="@color/main_text"
@@ -234,39 +242,39 @@
             android:id="@+id/block"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
             android:background="@color/bouton"
             android:text="Block"
             android:textColor="@color/main_text"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline14"
-            app:layout_constraintStart_toEndOf="@+id/buttonJump"
-            app:layout_constraintTop_toBottomOf="@+id/imageVie" />
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="@+id/guideline11" />
 
 
         <Button
             android:id="@+id/button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="8dp"
             android:background="@color/bouton"
             android:text="hit"
             android:textColor="@color/main_text"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/block"
+            app:layout_constraintStart_toStartOf="@+id/guideline14"
             app:layout_constraintTop_toTopOf="@+id/guideline11" />
 
     </android.support.constraint.ConstraintLayout>
